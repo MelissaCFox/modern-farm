@@ -4,31 +4,39 @@ import { createWheat } from "./seeds/wheat.js"
 import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
+import { addPlant } from "./field.js"
+import {usePlants} from "./field.js"
+
 
 export const plantSeeds = (planArray) => {
+    // let plantedFieldArray = usePlants()
     for (const rowArray of planArray) {
         for (const plant of rowArray) {
-            if (plant.name === "Asparagus") {
+            if (plant === "Asparagus") {
+                // debugger
                 const seed = createAsparagus()
-                fieldArray.push(seed)
-            } else if (plant.name === "Potato") {
+                addPlant(seed)
+            } else if (plant === "Potato") {
                 const seed = createPotato()
-                fieldArray.push(seed)
-            } else if (plant.name === "Soybean") {
+                addPlant(seed)
+            } else if (plant === "Soybean") {
                 const seed = createSoybean()
-                fieldArray.push(seed)
-            } else if (plant.name === "Sunflower") {
+                addPlant(seed)
+            } else if (plant === "Sunflower") {
                 const seed = createSunflower()
-                fieldArray.push(seed)
-            } else if (plant.name === "Wheat") {
+                addPlant(seed)
+            } else if (plant === "Wheat") {
                 const seed = createWheat()
-                fieldArray.push(seed)
-            } else if (plant.name === "Corn") {
+                addPlant(seed)
+            } else if (plant === "Corn") {
                 const seed = createCorn()
-                fieldArray.push(seed)
+                for (let i=0; i<seed.length; i++)
+                addPlant(seed[i])
             }
             
         }
-    }
+    } 
+    // let fieldArray = usePlants()
+    // return fieldArray
 }
 

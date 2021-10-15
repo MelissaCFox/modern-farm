@@ -8,6 +8,8 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { addPlant } from "./field.js"
 import { usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
+import { catalog } from "./catalog.js"
 
 // const asparagusSeed = createAsparagus()
 // console.log(asparagusSeed)
@@ -33,13 +35,19 @@ import { plantSeeds } from "./tractor.js"
 // console.log(testField)
 
 const yearlyPlan = createPlan()
-// console.log(yearlyPlan)
+console.log(yearlyPlan) //Yearly plan successfully placed in an array
 
-// console.log("Welcome to the main module")
+plantSeeds(yearlyPlan)
 
+const plantedField = usePlants()
+console.log(plantedField)
 
-plantSeeds(yearlyPlan) //Is this actually pushing seed objects to the fields array?
-const testField = usePlants()
-console.log(testField)
+const harvestedArray = harvestPlants(plantedField)
+console.log(harvestedArray)
+
+const container = document.querySelector(".container")
+const catalogHTML = catalog(harvestedArray)
+container.innerHTML = catalogHTML
+
 
 

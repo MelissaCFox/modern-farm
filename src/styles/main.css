@@ -2,7 +2,26 @@
 
 /*Typography
 --------------------------------------------------------------*/
-body,
+/* *{
+    border: black solid 1px
+} */
+
+body {
+    background-color: rgb(241, 235, 180);
+    font-family:  "Comfortaa", Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant {
+    margin: 20px;
+    padding: 5px
+}
 button,
 input,
 select,
