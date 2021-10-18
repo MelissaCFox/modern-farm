@@ -40,7 +40,7 @@ console.log(yearlyPlan) //Yearly plan successfully placed in an array
 plantSeeds(yearlyPlan)
 
 const plantedField = usePlants()
-console.log(plantedField)
+console.log(plantedField) //field array 
 
 const harvestedArray = harvestPlants(plantedField)
 console.log(harvestedArray)

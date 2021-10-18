@@ -5,11 +5,10 @@ import { createPotato } from "./seeds/potato.js"
 import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { addPlant } from "./field.js"
-import {usePlants} from "./field.js"
 
 
 export const plantSeeds = (planArray) => {
-    // let plantedFieldArray = usePlants()
+
     for (const rowArray of planArray) {
         for (const plant of rowArray) {
             if (plant === "Asparagus") {
@@ -36,7 +35,6 @@ export const plantSeeds = (planArray) => {
             
         }
     } 
-    // let fieldArray = usePlants()
-    // return fieldArray
+
 }
 
